@@ -1,16 +1,15 @@
 import {
-  Button,
   Modal,
   ModalBody,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import close from "../assets/close.png";
-import CustomSelect from "./CustomSelectInput";
 import { serviceTypeOptions } from "../constants/data";
+import CustomSelect from "./CustomSelectInput";
+import Clip from "../assets/clip.png";
 
 const TicketModal = ({ isOpen, onClose }) => {
   // State for ticket form fields
@@ -57,7 +56,7 @@ const TicketModal = ({ isOpen, onClose }) => {
               <div>
                 <label
                   htmlFor='serviceType'
-                  className='block font-normal text-[#555555] mb-1'
+                  className='block font-normal text-[#555555] mb-1 required'
                 >
                   Service Type
                 </label>
@@ -68,7 +67,7 @@ const TicketModal = ({ isOpen, onClose }) => {
               <div>
                 <label
                   htmlFor='location'
-                  className='block font-normal text-[#555555] mb-1'
+                  className='block font-normal text-[#555555] mb-1 required'
                 >
                   Location
                 </label>
@@ -83,31 +82,35 @@ const TicketModal = ({ isOpen, onClose }) => {
               <div>
                 <label
                   htmlFor='priority'
-                  className='block font-normal text-[#555555] mb-1'
+                  className='block font-normal text-[#555555] mb-1 required'
                 >
                   Priority
                 </label>
 
                 <CustomSelect options={serviceTypeOptions} />
               </div>
-              <div>
+              <div className='flex relative bg-white'>
                 <label
                   htmlFor='attachment'
-                  className='block font-normal text-[#555555] mb-1'
+                  className='block font-normal text-[#555555] mb-1 border w-full relative'
                 >
-                  Upload File
+                  Upload
+                  <span className='absolute top-1/2 right-3 transform -translate-y-1/2 pointer-events-none'>
+                    <img src={Clip} alt='' className='h-5' />
+                  </span>
+                  <input
+                    id='attachment'
+                    type='file'
+                    className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hidden'
+                    placeholder='Attach'
+                  />
                 </label>
-
-                <input
-                  id='attachment'
-                  type='file'
-                  className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400'
-                />
               </div>
+
               <div className='col-span-2'>
                 <label
                   htmlFor='description'
-                  className='block font-normal text-[#555555] mb-1'
+                  className='block font-normal text-[#555555] mb-1 required'
                 >
                   Description
                 </label>

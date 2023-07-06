@@ -10,3 +10,16 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+.required:after {
+  content: " *";
+  color: red;
+}
+
+.image-upload > input {
+  display: none;
+}
+
+.image-upload img {
+  cursor: pointer;
+}
