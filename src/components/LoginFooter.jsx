@@ -5,7 +5,7 @@ import { Image } from "@chakra-ui/react";
 const LoginFooter = () => {
   return (
     <>
-      <div className='flex items-center justify-between '>
+      <div className='flex items-center justify-between'>
         <Image alt={"Logo Image"} objectFit={"cover"} src={Logo} width={100} />
         <div className='flex items-center gap-2'>
           <p className='text-xs text-[#1296B0] font-normal font-poppins'>

@@ -35,7 +35,7 @@ const ItCharts = () => {
   return (
     <>
       <div className='w-full bg-[#78787807] p-3 md:p-5'>
-        <div className='grid grid-cols-1 items-start w-full justify-center gap-5 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 items-start w-full justify-center gap-5 lg:grid-cols-2 xl:grid-cols-3'>
           <div className='w-full'>
             <ChartCards
               title='Top 5 Request Categories'
@@ -52,7 +52,7 @@ const ItCharts = () => {
           </div>
           <div className='w-full'>
             <ChartCards
-              title='Top 5 Request Categories'
+              title='Top 5 Incident Request'
               doughnutData={doughnutData}
               chartItems={chartItems}
             />
@@ -72,15 +72,18 @@ const ItCharts = () => {
             </h1>
             <div className='bg-[#E6E6E6] mt-2 lg:py-[72px] px-4 w-full'>
               <div className='flex flex-col md:flex-row  justify-between w-full '>
-                {ratingItems?.map((item) => (
-                  <p className='text-sm font-medium font-poppins text-[#555555] py-1'>
+                {ratingItems?.map((item, idx) => (
+                  <p
+                    key={idx}
+                    className='text-sm font-medium font-poppins text-[#555555] py-1'
+                  >
                     {item}
                   </p>
                 ))}
               </div>
-              <div className='flex items-center flex-col mt-2 md:flex-row w-full justify-between'>
-                <img src={Rating1} alt='' srcset='' />
-                <img src={Rating2} alt='' srcset='' />
+              <div className='flex items-center flex-col mt-2 xl:flex-row w-full justify-between'>
+                <img src={Rating1} alt='chart' />
+                <img src={Rating2} alt='chart' />
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@ const Navbar = () => {
             alt={"Logo Image"}
             objectFit={"cover"}
             src={Logo}
-            className='flex flex-col items-center justify-center w-36'
+            className='flex flex-col items-center justify-center w-36 cursor-pointer'
           />
           <div className='border-l border-[#E6E6E6] hidden md:block'>
             <div className='flex items-center ml-5'>

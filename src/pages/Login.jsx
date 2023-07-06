@@ -1,4 +1,4 @@
-import { Flex, FormControl, Image, Stack } from "@chakra-ui/react";
+import { Flex, FormControl, Image } from "@chakra-ui/react";
 import React, { useState } from "react";
 import LoginImage from "../assets/loginImage.png";
 import Logo from "../assets/logo.png";
@@ -19,19 +19,24 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formValue);
+    localStorage.setItem("formData", JSON.stringify(formValue));
+
+    // Navigate to ITDesk page
+    window.location.href = "/itdesk";
   };
+
   return (
     <>
       <div className='h-screen w-full flex flex-col md:flex-row items-center justify-center gap-5 overflow-hidden'>
-        <div className='bg-[#1296B0] w-1/2 h-screen  hidden md:flex items-center justify-center'>
+        <div className='bg-[#1296B0] w-1/2 h-screen hidden md:flex items-center justify-center'>
           <Image alt={"Login Image"} objectFit={"cover"} src={LoginImage} />
         </div>
-        <div className=' md:w-1/2 flex flex-col items-center mt-52 justify-between md:justify-center h-screen w-full lg:justify-center'>
+        <div className='md:w-1/2 flex flex-col items-center mt-52 justify-between md:justify-center h-screen w-full lg:justify-center'>
           <Image
             alt={"Logo Image"}
             objectFit={"cover"}
             src={Logo}
-            className='flex flex-col items-center justify-center '
+            className='flex flex-col items-center justify-center'
           />
           <form
             onSubmit={handleSubmit}
@@ -46,7 +51,7 @@ const Login = () => {
                 name='email'
                 value={formValue.email}
                 onChange={handleChange}
-                placeholder='Employee ID/Email ID '
+                placeholder='Employee ID/Email ID'
                 className='w-full border-[0.78px] text-sm font-normal border-[#1296B0] py-[10px] px-3 rounded-md placeholder:text-[#B9B9B9] mb-5'
               />
             </FormControl>
@@ -57,7 +62,7 @@ const Login = () => {
                 value={formValue.password}
                 onChange={handleChange}
                 placeholder='Enter Password'
-                className='w-full border-[0.78px] text-sm font-normal border-[#1296B0] py-[10px] px-3 rounded-md placeholder:text-[#B9B9B9] '
+                className='w-full border-[0.78px] text-sm font-normal border-[#1296B0] py-[10px] px-3 rounded-md placeholder:text-[#B9B9B9]'
               />
             </FormControl>
             <h1 className='text-xs flex justify-end text-[#1296B0] font-poppins font-semibold mt-1'>
@@ -69,7 +74,7 @@ const Login = () => {
             >
               <div className='flex items-center justify-between'>
                 <p className='text-center flex-grow'>Login to PeopleSol</p>
-                <img src={RightArrow} className='w-7 mr-1' />
+                <img src={RightArrow} alt='Right Arrow' className='w-7 mr-1' />
               </div>
             </button>
           </form>

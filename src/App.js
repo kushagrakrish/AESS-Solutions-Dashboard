@@ -1,19 +1,26 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Login from "./pages/Login";
-import { Home } from "./pages/Home";
-import Navbar from "./components/Navbar";
+import React, { useEffect } from "react";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import ItDesk from "./pages/ItDesk";
+import Login from "./pages/Login";
 import Tickets from "./pages/Tickets";
 
 const App = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // useEffect(() => {
+  //   const storedFormData = localStorage.getItem("formData");
+  //   const isLoggedIn = storedFormData && location.pathname !== "/";
+  //   if (isLoggedIn) {
+  //     navigate("/itdesk");
+  //   } else {
+  //     navigate("/");
+  //   }
+  // }, [navigate, location]);
   return (
     <>
-      {/* <h1 className='text-7xl text-green-900 font-poppins '>AESS Dashboard</h1> */}
-      <Navbar />
       <Routes>
         <Route element={<Login />} path='/' />
-        <Route element={<Home />} path='/home' />
         <Route element={<ItDesk />} path='/itdesk' />
         <Route element={<Tickets />} path='/tickets' />
       </Routes>
