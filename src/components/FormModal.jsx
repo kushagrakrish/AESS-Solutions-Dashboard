@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import close from "../assets/close.png";
+import CustomSelect from "./CustomSelectInput";
+import { serviceTypeOptions } from "../constants/data";
 
 const TicketModal = ({ isOpen, onClose }) => {
   // State for ticket form fields
@@ -50,7 +52,6 @@ const TicketModal = ({ isOpen, onClose }) => {
         </ModalHeader>
 
         <ModalBody className='flex items-center bg-[#FAF9F8]' width={"full"}>
-          {/* <div className='bg-gray-100 w-full'> */}
           <div className='container mx-auto p-0 md:p-8 w-full'>
             <form className='grid grid-cols-2 gap-4 w-full'>
               <div>
@@ -61,16 +62,7 @@ const TicketModal = ({ isOpen, onClose }) => {
                   Service Type
                 </label>
 
-                <select
-                  required={true}
-                  id='serviceType'
-                  className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400'
-                >
-                  <option disabled selected>
-                    Select Service Type
-                  </option>
-                  {/* Add your service type options here */}
-                </select>
+                <CustomSelect options={serviceTypeOptions} />
               </div>
 
               <div>
@@ -96,15 +88,7 @@ const TicketModal = ({ isOpen, onClose }) => {
                   Priority
                 </label>
 
-                <select
-                  id='priority'
-                  className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400'
-                >
-                  <option disabled selected>
-                    Select Priority
-                  </option>
-                  {/* Add your priority options here */}
-                </select>
+                <CustomSelect options={serviceTypeOptions} />
               </div>
               <div>
                 <label
@@ -151,7 +135,6 @@ const TicketModal = ({ isOpen, onClose }) => {
               </div>
             </form>
           </div>
-          {/* </div> */}
         </ModalBody>
       </ModalContent>
     </Modal>
