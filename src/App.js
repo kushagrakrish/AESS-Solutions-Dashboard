@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import { Home } from "./pages/Home";
 import Navbar from "./components/Navbar";
 import ItDesk from "./pages/ItDesk";
+import Tickets from "./pages/Tickets";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route element={<Login />} path='/' />
         <Route element={<Home />} path='/home' />
         <Route element={<ItDesk />} path='/itdesk' />
+        <Route element={<Tickets />} path='/tickets' />
       </Routes>
     </>
   );
