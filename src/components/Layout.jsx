@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 const Layout = ({ children }) => {
   return (
     <>
-      <div className='flex w-full items-start relative'>
+      <div className='flex w-full items-start relative '>
         <div className='flex-shrink-0 w-52 sticky hidden lg:block'>
           <Sidebar />
         </div>

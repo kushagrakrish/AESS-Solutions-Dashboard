@@ -14,7 +14,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 const Tickets = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const rowsPerPage = 5;
+  const rowsPerPage = 10;
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
@@ -28,20 +28,20 @@ const Tickets = () => {
   return (
     <>
       <Layout>
-        <div className='m-2 mt-5 md:m-10 p-2 md:p-5 bg-[#FFFFFF] shadow-lg rounded-2xl'>
+        <div className='m-2 mt-5 md:m-0 p-2 md:p-5 bg-[#FFFFFF] shadow-lg rounded-2xl'>
           <div className='w-full flex flex-col gap-3 items-center justify-between md:flex-row md:gap-0'>
             <div className='flex items-center gap-3'>
-              <Button
-                colorScheme='blue'
-                py={2}
-                px={2}
-                rounded='md'
+              <button
                 onClick={onOpen}
-                className='flex items-center font-poppins font-medium text-xs'
+                style={{
+                  background:
+                    "linear-gradient(rgba(18, 150, 176, 1) rgba(17, 127, 149, 1))",
+                }}
+                className='flex items-center font-poppins px-2 py-2 rounded-md btn-color font-medium text-xs bg-[#1296B0] text-white'
               >
                 <img src={Plus} className='w-6' alt='Plus Icon' />
                 <span>Raise IT Desk Ticket</span>
-              </Button>
+              </button>
               <div className='flex items-center gap-2.5'>
                 <img src={Square} className='w-6' alt='Square Icon' />
                 <h2 className='text-[#1296B0] text-sm lg:text-base font-poppins font-medium'>

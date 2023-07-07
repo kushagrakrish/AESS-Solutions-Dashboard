@@ -25,7 +25,7 @@ const ItDesk = () => {
   return (
     <>
       <Layout>
-        <div className='m-2 mt-5 md:m-10 p-2 md:p-5 bg-[#FFFFFF] shadow-lg rounded-2xl'>
+        <div className='m-2 mt-5 md:m-10 p-2 md:p-5 bg-[#FFFFFF] shadow-lg rounded-2xl  '>
           {/* Heading */}
           <div className='flex items-center justify-center'>
             <h1 className='text-lg font-poppins font-semibold text-[#1296B0] border-b-2 text-center pb-1 border-[#1296B0] inline-block'>
@@ -34,7 +34,7 @@ const ItDesk = () => {
           </div>
           {/* Second Shadow Card */}
           <div className='m-2 md:m-3 bg-[#FFFFFF] shadow-lg rounded-xl'>
-            <div className='flex flex-col gap-3 items-center justify-center p-3 md:p-5 md:flex-row md:justify-between w-full'>
+            <div className='flex flex-col gap-3 items-center justify-center p-3 md:p-5 md:flex-row md:justify-between w-full '>
               <h1 className='text-sm text-[#555555] font-poppins font-semibold'>
                 Top Requests - 20/05/2023 and 20/06/2023
               </h1>

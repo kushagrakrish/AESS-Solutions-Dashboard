@@ -6,31 +6,36 @@ export const serviceTypeOptions = [
   { value: "option2", label: "Option 2" },
   { value: "option3", label: "Option 3" },
 ];
+export const pageNumberOptions = [
+  { value: "1", label: "1" },
+  { value: "2", label: "2" },
+  { value: "3", label: " 3" },
+];
 
 export const chartItems = [
   {
-    bg: "#5BC4BF",
+    bg: "#FF6384",
     title: "Asset",
-    desc: "45",
+    desc: "20",
   },
   {
-    bg: "#5BC4BF",
-    title: "Asset",
-    desc: "45",
+    bg: "#36A2EB",
+    title: "Access",
+    desc: "30",
   },
   {
-    bg: "#5BC4BF",
-    title: "Asset",
-    desc: "45",
+    bg: "#FFCE56",
+    title: "Incidents",
+    desc: "15",
   },
   {
-    bg: "#5BC4BF",
-    title: "Asset",
-    desc: "45",
+    bg: "#4BC0C0",
+    title: "Change",
+    desc: "10",
   },
   {
-    bg: "#5BC4BF",
-    title: "Asset",
+    bg: "#9966FF",
+    title: "Service",
     desc: "45",
   },
 ];
@@ -238,6 +243,106 @@ export const tableData = [
     location: "Maharashtra",
     assignedTo: "Ali",
     createdOn: "22/07/23",
+  },
+  {
+    action: (
+      <div className='flex items-center gap-2'>
+        <img src={list} alt='list' className='w-6' />
+        <img src={not} alt='not' className='w-6' />
+      </div>
+    ),
+    requestNumber: 308,
+    status: (
+      <p className='text-yellow-300 py-1 px-1 bg-yellow-50 text-center rounded-md'>
+        In Progress
+      </p>
+    ),
+    serviceType: "Change Request",
+    serviceCategory: "NETWORK",
+    description: "Test456",
+    location: "New York",
+    assignedTo: "John",
+    createdOn: "23/07/23",
+  },
+  {
+    action: (
+      <div className='flex items-center gap-2'>
+        <img src={list} alt='list' className='w-6' />
+        <img src={not} alt='not' className='w-6' />
+      </div>
+    ),
+    requestNumber: 308,
+    status: (
+      <p className='text-yellow-300 py-1 px-1 bg-yellow-50 text-center rounded-md'>
+        In Progress
+      </p>
+    ),
+    serviceType: "Change Request",
+    serviceCategory: "NETWORK",
+    description: "Test456",
+    location: "New York",
+    assignedTo: "John",
+    createdOn: "23/07/23",
+  },
+  {
+    action: (
+      <div className='flex items-center gap-2'>
+        <img src={list} alt='list' className='w-6' />
+        <img src={not} alt='not' className='w-6' />
+      </div>
+    ),
+    requestNumber: 308,
+    status: (
+      <p className='text-yellow-300 py-1 px-1 bg-yellow-50 text-center rounded-md'>
+        In Progress
+      </p>
+    ),
+    serviceType: "Change Request",
+    serviceCategory: "NETWORK",
+    description: "Test456",
+    location: "New York",
+    assignedTo: "John",
+    createdOn: "23/07/23",
+  },
+  {
+    action: (
+      <div className='flex items-center gap-2'>
+        <img src={list} alt='list' className='w-6' />
+        <img src={not} alt='not' className='w-6' />
+      </div>
+    ),
+    requestNumber: 308,
+    status: (
+      <p className='text-yellow-300 py-1 px-1 bg-yellow-50 text-center rounded-md'>
+        In Progress
+      </p>
+    ),
+    serviceType: "Change Request",
+    serviceCategory: "NETWORK",
+    description: "Test456",
+    location: "New York",
+    assignedTo: "John",
+    createdOn: "23/07/23",
+  },
+  {
+    action: (
+      <div className='flex items-center gap-2'>
+        <img src={list} alt='list' className='w-6' />
+        <img src={not} alt='not' className='w-6' />
+      </div>
+    ),
+    requestNumber: 308,
+    status: (
+      <p className='text-yellow-300 py-1 px-1 bg-yellow-50 text-center rounded-md'>
+        In Progress
+      </p>
+    ),
+    serviceType: "Change Request",
+    serviceCategory: "NETWORK",
+    description: "Test456",
+    location: "New York",
+    assignedTo: "John",
+    createdOn: "23/07/23",
   },
   {
     action: (

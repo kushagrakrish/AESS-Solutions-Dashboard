@@ -1,16 +1,16 @@
 import React from "react";
 import downArrow from "../assets/downArrow.png";
 
-const CustomSelect = ({ options }) => {
+const CustomSelect = ({ options, placeholder }) => {
   return (
-    <div className='relative'>
+    <div className='relative rounded-lg'>
       <select
         required={true}
         id='serviceType'
-        className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 appearance-none'
+        className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:outline focus:border-1 focus:border-[#1296B0] appearance-none'
       >
         <option disabled selected>
-          Select Service Type
+          {placeholder}
         </option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>

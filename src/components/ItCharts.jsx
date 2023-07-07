@@ -34,8 +34,8 @@ const ItCharts = () => {
   ];
   return (
     <>
-      <div className='w-full bg-[#78787807] p-3 md:p-5'>
-        <div className='grid grid-cols-1 items-start w-full justify-center gap-5 lg:grid-cols-2 xl:grid-cols-3'>
+      <div className='w-full bg-[#78787807] p-3 md:p-5 '>
+        <div className='grid grid-cols-1 items-start w-full justify-center gap-5 lg:grid-cols-2 xl:grid-cols-3 '>
           <div className='w-full'>
             <ChartCards
               title='Top 5 Request Categories'
@@ -71,7 +71,7 @@ const ItCharts = () => {
               Overall Ratings
             </h1>
             <div className='bg-[#E6E6E6] mt-2 lg:py-[72px] px-4 w-full'>
-              <div className='flex flex-col md:flex-row  justify-between w-full '>
+              <div className='flex flex-col md:flex-row justify-between  w-full '>
                 {ratingItems?.map((item, idx) => (
                   <p
                     key={idx}
@@ -81,7 +81,7 @@ const ItCharts = () => {
                   </p>
                 ))}
               </div>
-              <div className='flex items-center flex-col mt-2 xl:flex-row w-full justify-between'>
+              <div className='flex items-center flex-col mt-2 xl:mt-5 xl:flex-row w-full justify-between xl:justify-around'>
                 <img src={Rating1} alt='chart' />
                 <img src={Rating2} alt='chart' />
               </div>

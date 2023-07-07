@@ -8,8 +8,8 @@ import {
 import React, { useState } from "react";
 import close from "../assets/close.png";
 import { serviceTypeOptions } from "../constants/data";
+import FileUpload from "./CustomFileUploader";
 import CustomSelect from "./CustomSelectInput";
-import Clip from "../assets/clip.png";
 
 const TicketModal = ({ isOpen, onClose }) => {
   // State for ticket form fields
@@ -34,7 +34,13 @@ const TicketModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <Modal isCentered size={"2xl"} isOpen={isOpen} onClose={onClose}>
+    <Modal
+      isCentered={true}
+      size={"2xl"}
+      isOpen={isOpen}
+      onClose={onClose}
+      className='w-full'
+    >
       <ModalOverlay />
       <ModalContent>
         <ModalHeader
@@ -50,7 +56,7 @@ const TicketModal = ({ isOpen, onClose }) => {
           />
         </ModalHeader>
 
-        <ModalBody className='flex items-center bg-[#FAF9F8]' width={"full"}>
+        <ModalBody className='flex items-center bg-[#FAF9F8] w-full'>
           <div className='container mx-auto p-0 md:p-8 w-full'>
             <form className='grid grid-cols-2 gap-4 w-full'>
               <div>
@@ -76,7 +82,7 @@ const TicketModal = ({ isOpen, onClose }) => {
                   id='location'
                   type='text'
                   placeholder='Select Location'
-                  className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400'
+                  className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:outline focus:border-1 focus:border-[#1296B0]'
                 />
               </div>
               <div>
@@ -89,25 +95,12 @@ const TicketModal = ({ isOpen, onClose }) => {
 
                 <CustomSelect options={serviceTypeOptions} />
               </div>
-              <div className='flex relative bg-white'>
-                <label
-                  htmlFor='attachment'
-                  className='block font-normal text-[#555555] mb-1 border w-full relative'
-                >
-                  Upload
-                  <span className='absolute top-1/2 right-3 transform -translate-y-1/2 pointer-events-none'>
-                    <img src={Clip} alt='' className='h-5' />
-                  </span>
-                  <input
-                    id='attachment'
-                    type='file'
-                    className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hidden'
-                    placeholder='Attach'
-                  />
-                </label>
+
+              <div className='pt-6'>
+                <FileUpload />
               </div>
 
-              <div className='col-span-2'>
+              <div className='col-span-2 rounded-lg'>
                 <label
                   htmlFor='description'
                   className='block font-normal text-[#555555] mb-1 required'
@@ -118,7 +111,7 @@ const TicketModal = ({ isOpen, onClose }) => {
                 <textarea
                   id='description'
                   placeholder='Enter Description'
-                  className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400'
+                  className='w-full px-3 py-2 border rounded-lg focus:outline-none focus:outline focus:border-1 focus:border-[#1296B0]'
                 />
               </div>
               <div className='col-span-2 flex justify-end gap-5 mt-36'>
