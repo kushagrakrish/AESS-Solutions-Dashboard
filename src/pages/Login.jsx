@@ -1,6 +1,6 @@
 import { Flex, FormControl, Image } from "@chakra-ui/react";
 import React, { useState } from "react";
-import LoginImage from "../assets/loginImage.png";
+import LoginImage from "../assets/login.png";
 import Logo from "../assets/logo.png";
 import RightArrow from "../assets/right-arrow.svg";
 import LoginFooter from "../components/LoginFooter";
@@ -28,11 +28,15 @@ const Login = () => {
   return (
     <>
       <div className='h-screen w-full flex flex-col md:flex-row items-center justify-center gap-5 overflow-hidden'>
-        <div className='bg-[#1296B0] w-1/2 h-screen hidden md:flex items-center justify-center'>
-          <Image alt={"Login Image"} objectFit={"cover"} src={LoginImage} />
+        <div className='bg-[#1296B0] w-1/2 h-screen hidden md:flex items-center justify-center overflow-hidden'>
+          <Image
+            alt={"Login Image"}
+            src={LoginImage}
+            className='w-full bg-cover 2xl:w-3/4'
+          />
         </div>
         <div className='md:w-1/2 flex flex-col items-center mt-52 justify-between md:justify-center h-screen w-full lg:justify-center'>
-          <Image
+          <img
             alt={"Logo Image"}
             objectFit={"cover"}
             src={Logo}
