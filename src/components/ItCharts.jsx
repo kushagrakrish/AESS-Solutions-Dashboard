@@ -5,33 +5,6 @@ import { chartItems, doughnutData, ratingItems } from "../constants/data";
 import ChartCards from "./ChartCards";
 
 const ItCharts = () => {
-  const chartItem = [
-    {
-      bg: "#5BC4BF",
-      title: "Assest",
-      desc: "45",
-    },
-    {
-      bg: "#5BC4BF",
-      title: "Assest",
-      desc: "45",
-    },
-    {
-      bg: "#5BC4BF",
-      title: "Assest",
-      desc: "45",
-    },
-    {
-      bg: "#5BC4BF",
-      title: "Assest",
-      desc: "45",
-    },
-    {
-      bg: "#5BC4BF",
-      title: "Assest",
-      desc: "45",
-    },
-  ];
   return (
     <>
       <div className='w-full bg-[#78787807] p-3 md:p-5 '>
@@ -70,7 +43,7 @@ const ItCharts = () => {
             <h1 className='text-base font-medium  font-poppins text-[#555555] border-b-[0.75px] pb-1 border-[#E6E6E6]'>
               Overall Ratings
             </h1>
-            <div className='bg-[#E6E6E6] mt-2 lg:py-[72px] px-4 w-full'>
+            <div className='bg-[#ededed69] mt-2 lg:py-[72px] px-4 w-full'>
               <div className='flex flex-col md:flex-row justify-between  w-full '>
                 {ratingItems?.map((item, idx) => (
                   <p

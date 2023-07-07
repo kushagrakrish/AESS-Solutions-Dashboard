@@ -7,7 +7,7 @@ const ChartCards = ({ title, doughnutData, chartItems }) => {
       <h1 className='text-base font-medium font-poppins text-[#555555] border-b-[0.75px] pb-1 border-[#E6E6E6]'>
         {title}
       </h1>
-      <div className='bg-[#E6E6E6] mt-2 py-2 flex items-start justify-between md:justify-evenly px-2 md:py-10'>
+      <div className='bg-[#ededed69] mt-2 py-2 flex items-start justify-between md:justify-evenly px-2 md:py-10'>
         <div className='object-cover flex items-center justify-center'>
           <Doughnut
             data={doughnutData}

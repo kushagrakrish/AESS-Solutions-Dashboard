@@ -5,17 +5,17 @@ import rightArrow from "../assets/rightAngular.svg";
 const DashboardTable = ({ data, rowsPerPage }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Calculate the total number of pages
+  // it is used Calculate the total number of pages
   const totalPages = Math.ceil(data?.length / rowsPerPage);
 
-  // Calculate the starting and ending index for the current page
+  // it is used Calculate the starting and ending index for the current page
   const startIndex = (currentPage - 1) * rowsPerPage;
   const endIndex = startIndex + rowsPerPage;
 
-  // Get the subset of data for the current page
+  // it is used Get the subset of data for the current page
   const currentData = data?.slice(startIndex, endIndex);
 
-  // Function to handle page change
+  // Function to handle page change in application
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
@@ -44,11 +44,11 @@ const DashboardTable = ({ data, rowsPerPage }) => {
   return (
     <>
       <div className='relative overflow-x-auto shadow-md sm:rounded-lg'>
-        <table className='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
+        <table className='w-full text-sm text-left  text-gray-500 dark:text-gray-400'>
           {/* Table content */}
-          <thead className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
+          <thead className='text-xs text-gray-700 uppercase bg-blue-50 dark:bg-gray-700 dark:text-gray-400'>
             <tr>
-              <th scope='col' className='px-6 py-3'>
+              <th scope='col' className='px-6 py-3 border-r-2 border-[#1296B0]'>
                 Action
               </th>
               <th scope='col' className='px-6 py-3'>
@@ -82,11 +82,11 @@ const DashboardTable = ({ data, rowsPerPage }) => {
             {currentData?.map((row, index) => (
               <tr
                 key={index}
-                className='bg-white border-b dark:bg-gray-800 dark:border-gray-700'
+                className='bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700 '
               >
                 <th
                   scope='row'
-                  className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white'
+                  className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border-r-2 border-[#e8e8e8] '
                 >
                   {row.action}
                 </th>

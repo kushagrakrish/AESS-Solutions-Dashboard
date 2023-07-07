@@ -1,4 +1,4 @@
-import { Flex, FormControl, Image } from "@chakra-ui/react";
+import { FormControl, Image } from "@chakra-ui/react";
 import React, { useState } from "react";
 import LoginImage from "../assets/login.png";
 import Logo from "../assets/logo.png";
@@ -35,16 +35,19 @@ const Login = () => {
             className='w-full bg-cover 2xl:w-3/4'
           />
         </div>
-        <div className='md:w-1/2 flex flex-col items-center mt-52 justify-between md:justify-center h-screen w-full lg:justify-center'>
-          <img
-            alt={"Logo Image"}
-            objectFit={"cover"}
-            src={Logo}
-            className='flex flex-col items-center justify-center'
-          />
+        <div className='md:w-1/2 flex flex-col items-center justify-evenly h-full md:justify-evenly w-full '>
+          {/* Logo Div */}
+          <div className='mt-10'>
+            <img
+              alt={"Logo Image"}
+              objectFit={"cover"}
+              src={Logo}
+              className='flex flex-col items-center justify-center'
+            />
+          </div>
           <form
             onSubmit={handleSubmit}
-            className='-mt-40 w-11/12 lg:w-1/2 flex flex-col md:w-3/4 md:mt-20 md:mb-52'
+            className=' w-11/12 lg:w-1/2 flex flex-col md:w-3/4 mb-20'
           >
             <h1 className='text-base text-[#1296B0] font-poppins font-semibold mb-1'>
               Login
@@ -84,7 +87,7 @@ const Login = () => {
               </div>
             </button>
           </form>
-          <div className='md:w-11/12 lg:w-2/3 mb-5'>
+          <div className='md:w-11/12 lg:w-2/3 '>
             <LoginFooter />
           </div>
         </div>
