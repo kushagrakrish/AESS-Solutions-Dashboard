@@ -47,6 +47,7 @@ const Login = () => {
             </h1>
             <FormControl>
               <input
+                required
                 type='email'
                 name='email'
                 value={formValue.email}
@@ -57,6 +58,7 @@ const Login = () => {
             </FormControl>
             <FormControl>
               <input
+                required
                 type='password'
                 name='password'
                 value={formValue.password}
